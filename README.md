@@ -1,3 +1,11 @@
+<div align="center">
+  
+![Python](https://img.shields.io/badge/Python-3776AB?style=flat&logo=python&logoColor=white)
+![License](https://img.shields.io/badge/License-CC0--1.0-lightgrey.svg?style=flat)
+![Status](https://img.shields.io/badge/Status-Concluído-brightgreen?style=flat)
+
+</div>
+
 # Termo-Solver
 Para pôr em prática meus conhecimentos em Python e Machine Learning, decidi criar um agente capaz de resolver o jogo de navegador chamado Termo. A ideia principal, no começo do projeto, era criar um agente de Machine Learning que pudesse solucionar todas as variantes do jogo (Dueto e Quarteto), mas, como o agente heurístico sem Machine Learning alcançou uma acurácia de 96%, decidi parar por aqui, sem a necessidade de implementar a complexidade do Machine Learning neste projeto.
 
@@ -9,3 +17,7 @@ Term.ooo ou Termo é um jogo de palavras online [...]. No jogo, os jogadores tê
 ### Sobre os agentes
 
 ### Métricas e validações
+
+
+---
+> IA foi utilizada neste projeto apenas para auxílio na redação deste README, debug do código e estudo da biblioteca Playwright.
