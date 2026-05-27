@@ -2,7 +2,7 @@
   
 ![Python](https://img.shields.io/badge/Python-3776AB?style=flat&logo=python&logoColor=white)
 ![License](https://img.shields.io/badge/License-CC0--1.0-lightgrey.svg?style=flat)
-![Status](https://img.shields.io/badge/Status-Concluído-brightgreen?style=flat)
+![Status](https://img.shields.io/badge/Status-Em%20andamento-yellow?style=flat)
 
 </div>
 
