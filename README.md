@@ -27,7 +27,13 @@ Dataset: [Term.ooo Valid Guesses and Answers](https://www.kaggle.com/datasets/lu
 ### Sobre os agentes
 Para testar o ambiente de maneira automática e validar resultados simples, foi criado um bot que chuta palavras de maneira aleatória usando apenas `random.choice(valid_answers)`. Esse bot perde 99% dos jogos e foi criado apenas para auxiliar o desenvolvimento do ambiente. A função `test_agent` de `termo_agents.ipynb` recebe um agente como parâmetro e o número de épocas, que equivale à quantidade de jogos. A cada jogo, é escolhida aleatoriamente uma palavra e o bot tem 6 tentativas para acertá-la. Caso acerte, é anotado em uma lista de 7 posições em qual tentativa o bot acertou a palavra correta — a última posição dessa lista representa os casos em que o bot não consegue acertar em 6 tentativas. A função retorna um array de números indicando a distribuição de vitórias por tentativa ao longo dos jogos ou épocas.
 
-Com o ambiente devidamente criado, foi desenvolvido primeiramente um bot que calcula o score de todas as palavras e encontra a palavra com maior score, calculando cada palavra do dataset contra ela mesma. O score é obtido pela soma dos retornos da função `try_word_check` em `ranking_words`, quanto mais `1`s houver no array de 5 posições, maior será o score da palavra. As piores palavras possuem score muito baixo, pois quase nunca acertam nenhuma posição correta ou letra existente na palavra-alvo. Com a função `ranking_words` é possível encontrar as 10 melhores palavras para iniciar qualquer partida de Termo, bem como a melhor palavra para abrir o jogo, por meio da ordenação decrescente do score. Ordenando a lista de forma crescente, conseguimos ver as 10 piores palavras para iniciar a partida e também a pior palavra. _(aqui são exibidas as duas tabelas com as 10 palavras de cada lado)_.
+Com o ambiente devidamente criado, foi desenvolvido primeiramente um bot que calcula o score de todas as palavras e encontra a palavra com maior score, calculando cada palavra do dataset contra ela mesma. O score é obtido pela soma dos retornos da função `try_word_check` em `ranking_words`, quanto mais `1`s houver no array de 5 posições, maior será o score da palavra. As piores palavras possuem score muito baixo, pois quase nunca acertam nenhuma posição correta ou letra existente na palavra-alvo. Com a função `ranking_words` é possível encontrar as 10 melhores palavras para iniciar qualquer partida de Termo, bem como a melhor palavra para abrir o jogo, por meio da ordenação decrescente do score. Ordenando a lista de forma crescente, conseguimos ver as 10 piores palavras para iniciar a partida e também a pior palavra.
+<div align="center" display="inline">
+
+<img src="attachments/Top10BestWords.png" width="48%"/>
+<img src="attachments/Top10WorstWords.png" width="48%"/>
+
+</div>
 
 O agente _simple reflex_ foi criado para resolver o jogo do Termo na modalidade com uma única palavra, e, posteriormente, o _model based agent_ foi criado para solucionar as variações do jogo (Dueto e Quarteto), calculando o score e tentando a palavra com maior score com base nos demais jogos ocorrendo simultaneamente. Esse agente vence 99% das vezes.
 
@@ -36,7 +42,7 @@ Para calcular manualmente a precisão do bot com exatidão, o cálculo seria mui
 
 <div align="center">
 
-<img src="attachments/ChartBlackDistribution.png" width="400"/>
+<img src="attachments/ChartBlackDistribution.png"/>
 
 </div>
 
