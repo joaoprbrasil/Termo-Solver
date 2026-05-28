@@ -140,7 +140,7 @@ def simple_reflex_agent(history, valid_answers=file_answers['word'], valid_guess
     #print(ranked_words)
     return max(ranked_words, key=ranked_words.get)
 
-def model_based_reflex_agent(histories, valid_answers):
+def model_based_reflex_agent(histories, valid_answers=file_answers['word']):
     """
     Model-Based Reflex Agent faz tentativas com a vencedora da funcao:
     ranking_words()
@@ -148,9 +148,7 @@ def model_based_reflex_agent(histories, valid_answers):
 
     """
 
-    if not histories:
-        #ranked_words = ranking_words(valid_answers)
-        #return max(ranked_words, key=ranked_words.get)
+    if all(not history for history in histories):
         return 'serao'
 
     # Removendo boards que já foram finalizados

@@ -18,6 +18,7 @@ def run(playwright: Playwright):
         boards = page.locator('wc-board').count()
         attempt_count = int(page.locator('wc-board').first.get_attribute('rows'))
         histories = [list() for _ in range(boards)]
+
         print('boards:', boards)
         print('history:', histories)
         print('tentativas:', attempt_count)
