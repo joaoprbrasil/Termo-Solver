@@ -40,7 +40,7 @@ O agente _simple reflex_ foi criado para resolver o jogo do Termo na modalidade 
 ### Métricas e validações
 Para calcular manualmente a precisão do bot com exatidão, utilizei uma simulação exaustiva com todas as 1442 possíveis palavras.
 
-<div align="center">
+<div align="center" display="inline">
 
 <img src="attachments/ChartBlackDistribution.png"/>
 <img src="attachments/SingleTextNumber.png"/>
