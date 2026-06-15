@@ -272,3 +272,43 @@ def model_based_reflex_agent(histories, valid_answers=file_answers['word']):
     #ranked_words = ranking_words(valid_answers, valid_answers)
     #print(ranked_words)
     return max(all_ranked_words, key=all_ranked_words.get)
+
+def test_agents_exhaustive(agent, valid_answers):
+    tries_count = [0] * 7
+
+    for target_word in valid_answers:
+        history = []
+        tries = -1
+
+        for attempt in range(6):
+            if agent.__name__ == 'model_based_reflex_agent':
+                try_word = agent([history], valid_answers)
+            else:
+                try_word = agent(history, valid_answers)
+
+            history.append({try_word: try_word_check(try_word, target_word)})
+
+            if try_word == target_word:
+                tries = attempt
+                break
+
+        # if tries == -1:
+        #     print(target_word)
+
+        tries_count[tries] += 1
+
+    return tries_count
+
+
+# resultado = test_agents_exhaustive(model_based_reflex_agent, valid_answers)
+#
+# print("Distribuição de vitórias por tentativa (e derrotas no final):")
+# print(resultado)
+#
+# total_jogos = len(valid_answers)
+# vitorias = sum(resultado[:-1])
+# derrotas = resultado[-1]
+#
+# print(f"\nTotal de palavras testadas: {total_jogos}")
+# print(f"Taxa de acerto exata: {(vitorias / total_jogos) * 100:.2f}%")
+# print(f"Taxa de derrota exata: {(derrotas / total_jogos) * 100:.2f}%")

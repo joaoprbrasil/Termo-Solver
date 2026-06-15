@@ -38,11 +38,12 @@ Com o ambiente devidamente criado, foi desenvolvido primeiramente um bot que cal
 O agente _simple reflex_ foi criado para resolver o jogo do Termo na modalidade com uma única palavra, e, posteriormente, o _model based agent_ foi criado para solucionar as variações do jogo (Dueto e Quarteto), calculando o score e tentando a palavra com maior score com base nos demais jogos ocorrendo simultaneamente. Esse agente vence 99% das vezes.
 
 ### Métricas e validações
-Para calcular manualmente a precisão do bot com exatidão, o cálculo seria muito complexo, portanto utilizei uma simulação de Monte Carlo com 100.000 jogos para estimar a taxa de vitória do agente.
+Para calcular manualmente a precisão do bot com exatidão, utilizei uma simulação exaustiva com todas as 1442 possíveis palavras.
 
 <div align="center">
 
 <img src="attachments/ChartBlackDistribution.png"/>
+<img src="attachments/SingleTextNumber.png"/>
 
 </div>
 
