@@ -30,8 +30,8 @@ Para testar o ambiente de maneira automática e validar resultados simples, foi 
 Com o ambiente devidamente criado, foi desenvolvido primeiramente um bot que calcula o score de todas as palavras e encontra a palavra com maior score, calculando cada palavra do dataset contra ela mesma. O score é obtido pela soma dos retornos da função `try_word_check` em `ranking_words`, quanto mais `1`s houver no array de 5 posições, maior será o score da palavra. As piores palavras possuem score muito baixo, pois quase nunca acertam nenhuma posição correta ou letra existente na palavra-alvo. Com a função `ranking_words` é possível encontrar as 10 melhores palavras para iniciar qualquer partida de Termo, bem como a melhor palavra para abrir o jogo, por meio da ordenação decrescente do score. Ordenando a lista de forma crescente, conseguimos ver as 10 piores palavras para iniciar a partida e também a pior palavra.
 <div align="center" display="inline">
 
-<img src="attachments/Top10BestWords.png" width="48%"/>
-<img src="attachments/Top10WorstWords.png" width="48%"/>
+<img src="attachments/BestWords.png" width="48%"/>
+<img src="attachments/WorstWords.png" width="48%"/>
 
 </div>
 
@@ -42,8 +42,8 @@ Para calcular manualmente a precisão do bot com exatidão, utilizei uma simula�
 
 <div align="center" display="inline">
 
-<img src="attachments/ChartBlackDistribution.png"/>
-<img src="attachments/SingleTextNumber.png"/>
+<img src="attachments/TryDistribution.png"/>
+<img src="attachments/SingleNumber.png"/>
 
 </div>
 
