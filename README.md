@@ -42,8 +42,8 @@ Para calcular manualmente a precisão do bot com exatidão, utilizei uma simula�
 
 <div align="center" display="inline">
 
-<img src="attachments/TryDistribution.png"/>
-<img src="attachments/SingleNumber.png"/>
+<img src="attachments/TryDistribution.png" width="48%"/>
+<img src="attachments/SingleNumber.png" width="48%"/>
 
 </div>
 
